@@ -8,7 +8,7 @@ kubectl logs kibana|grep "Status changed from yellow to green"
 kubectl apply -f filebeat-kubernetes.yaml
 kubectl get pods -n kube-system | grep filebeat
 kubectl describe po -l k8s-app=filebeat-dynamic -n kube-system
-git clone https://github.com/kubernetes/kube-state-metrics.git kube-state-metrics
+git clone https://github.com/kubernetes/kube-state-metrics.git
 kubectl apply -f kube-state-metrics/kubernetes
 kubectl get po -l k8s-app=kube-state-metrics -n kube-system
 kubectl apply -f metricbeat-setup.yaml
