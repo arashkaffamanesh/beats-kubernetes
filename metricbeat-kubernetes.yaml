@@ -129,7 +129,7 @@ data:
           - pod
           - container
           - volume
-        hosts: ["84.200.100.201:443"]
+        hosts: ["<master-ip>:443"]
 
     metricbeat.autodiscover:
       providers:
